@@ -1,0 +1,7 @@
+--准备注册数据test02,test03
+--test02用来注册
+delete from user where username='test02'
+--test03用来登录
+delete from user where username='test03'
+
+insert into user values(100,'test03','123456')
