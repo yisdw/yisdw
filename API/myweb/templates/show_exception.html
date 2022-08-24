@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'base.html' %}
+    {% load static %}
+    <title>{% block title %}异常信息{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+
+         <p style="margin-left: 10px;">异常信息如下：</p>
+         <p style="margin-left: 10px; width: 90%">{{ exception_info|default_if_none:"" }}</p>
+
+    {% endblock %}
+</body>
+</html>

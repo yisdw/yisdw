@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎回来</title>
+    {% extends 'base.html' %}
+    {% block title %}主页{% endblock %}
+    {% block content %}
+        {% if request.user.is_authenticated %}
+        <h1>你好，{{ request.user.username }}！欢迎回来！</h1>
+        {% endif %}
+    {% endblock %}
+</head>
+<body>
+
+</body>
+</html>
